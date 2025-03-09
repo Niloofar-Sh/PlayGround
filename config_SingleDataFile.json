@@ -1,0 +1,12 @@
+{
+    "Budbreak Enhancers for Organic orchards 2016.xlsx": {
+    "sheet_name": "TPROB4BB2016",
+    "cultivar": {"CV": "HW"},
+    "treatments": {"TrtCombination": ["Control early", "Control late", "Hi-Cane early", "Hi-Cane late", "Mary early", "Mary late", "Excel early", "Excel late"]}
+    },
+    "Development of a tool to predict.xlsx": {
+        "sheet_name": "HaywardTPBB",
+        "cultivar": {"CV": "HW"},
+        "treatments": {"TrtCombination": ["Con1", "Con2", "HCT1", "HCT2", "HCT3", "HCT4", "HCT5"]}
+    }
+}

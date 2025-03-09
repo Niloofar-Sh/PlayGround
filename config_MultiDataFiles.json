@@ -1,0 +1,41 @@
+{
+    "Budbreak Enhancers for Organic orchards 2016.xlsx": {
+        "sheets": [
+            {
+                "sheet_name": "TPROB4BB2016",
+                "location": "Te Puke",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "Control early"}
+            },
+            {
+                "sheet_name": "TPROB4BB2016",
+                "location": "Te Puke",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "Control late"}
+            }
+        ]
+    },
+    "Development of a tool to predict.xlsx": {
+        "sheets": [
+            {
+                "sheet_name": "HaywardTPBB",
+                "location": "Te Puke",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "Con1"}
+            },
+            {
+                "sheet_name": "HaywardTPBB",
+                "location": "Te Puke",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "Con2"}
+            },
+            {
+                "sheet_name": "HaywardKKBB",
+                "location": "Kerikeri",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "Control"}
+            }
+        ]
+    }
+
+}
