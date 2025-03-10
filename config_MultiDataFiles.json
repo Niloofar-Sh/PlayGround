@@ -12,6 +12,18 @@
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control late"}
+            },
+            {
+                "sheet_name": "TPROB4BB2016",
+                "location": "Te Puke",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "Hi-Cane early"}
+            },
+            {
+                "sheet_name": "TPROB4BB2016",
+                "location": "Te Puke",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "Hi-Cane late"}
             }
         ]
     },
@@ -30,10 +42,34 @@
                 "treatments": {"TrtCombination": "Con2"}
             },
             {
+                "sheet_name": "HaywardTPBB",
+                "location": "Te Puke",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "HCT1"}
+            },
+            {
+                "sheet_name": "HaywardTPBB",
+                "location": "Te Puke",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "HCT5"}
+            },
+            {
                 "sheet_name": "HaywardKKBB",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control"}
+            },
+            {
+                "sheet_name": "HaywardKKBB",
+                "location": "Kerikeri",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "HiCane 1"}
+            },
+            {
+                "sheet_name": "HaywardKKBB",
+                "location": "Kerikeri",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"TrtCombination": "HiCane 5"}
             }
         ]
     }
