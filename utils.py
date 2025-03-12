@@ -41,7 +41,7 @@ def interpolate_full_range(df):
             series.loc[last_valid_idx:] = series[last_valid_idx]
         return series
 
-    # Apply the function row-wise
+    # Apply the function 
     df[numeric_cols] = df[numeric_cols].apply(fill_initial_nans, axis=1)
 
     # Create full range of numeric columns from min to max
