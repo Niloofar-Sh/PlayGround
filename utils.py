@@ -62,7 +62,6 @@ def find_daily_diff(df):
     diff_daily.iloc[:, 1:] = diff_daily.iloc[:, 1:].values - diff_daily.iloc[:, :-1].values
     return diff_daily
 
-
 def logistic_fit(x,y):
     # Define the logistic function
     def logistic(x, L, k, x0):
