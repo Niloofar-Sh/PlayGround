@@ -125,3 +125,16 @@ def calculate_fit_stats(original_values, fitted_values):
         "R2": r2,
         "NRMSE": nrmse
     }
+
+def proportionBB(df_doy_cols):
+    max_cumulative_bud_num = max(df_doy_cols.mean().values)
+    # return the proportion of bud break
+    return [round(bud/max_cumulative_bud_num,2) for bud in df_doy_cols.mean().values]
+
+def split_phrase(phrase):
+    if " " in phrase:
+        return phrase.split(" ")  # Split by space
+    elif "_" in phrase:
+        return phrase.split("_")  # Split by underscore
+    else:
+        return [phrase, phrase] # repeat the treatmnet name for both the experiment and treatment
