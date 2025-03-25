@@ -126,10 +126,10 @@ def calculate_fit_stats(original_values, fitted_values):
         "NRMSE": nrmse
     }
 
-def proportionBB(df_doy_cols):
-    max_cumulative_bud_num = max(df_doy_cols.mean().values)
-    # return the proportion of bud break
-    return [round(bud/max_cumulative_bud_num,2) for bud in df_doy_cols.mean().values]
+def BB_specifications(df_doy_cols, max_observed_buds):
+    # return the proportion of bud break and mean number of broken buds    
+    BudBurstDOY = [col for col in df_doy_cols.columns if df_doy_cols[col].mean()  > 0.05*max_observed_buds][0]
+    return [round(bud/max_observed_buds,2) for bud in df_doy_cols.mean().values], [round(bud,2) for bud in df_doy_cols.mean().values], BudBurstDOY
 
 def split_phrase(phrase):
     if " " in phrase:
