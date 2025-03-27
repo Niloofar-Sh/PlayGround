@@ -6,14 +6,16 @@
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control early"},
-                "max_observed_buds": 13
+                "max_observed_buds": 13,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2016.csv"
             },
             {
                 "sheet_name": "TPROB4BB2016",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control late"},
-                "max_observed_buds": 10
+                "max_observed_buds": 10,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2016.csv"
             }
         ]
     },
@@ -24,21 +26,24 @@
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Con1"},
-                "max_observed_buds": 15
+                "max_observed_buds": 15,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2015.csv"
             },
             {
                 "sheet_name": "HaywardTPBB",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Con2"},
-                "max_observed_buds": 13
+                "max_observed_buds": 13,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2015.csv"
             },
             {
                 "sheet_name": "HaywardKKBB",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control"},
-                "max_observed_buds": 10
+                "max_observed_buds": 10,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2015.csv"
             }
         ]
     },
@@ -49,16 +54,66 @@
                 "location": "Katoa",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
-                "max_observed_buds": 11
+                "max_observed_buds": 11,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2008.csv"
             },
             {
                 "sheet_name": "MeadBB2008",
                 "location": "Mead",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
-                "max_observed_buds": 10
+                "max_observed_buds": 10,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2008.csv"
             }
         ]
-    }
+    },
+    "Hydrogen cyanamide alternatives - a systems approach - Year 2.xlsx": {
+        "sheets": [
+            {
+                "sheet_name": "KatoaBB2009",
+                "location": "Katoa",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"Chemical": "control"},
+                "max_observed_buds": 13,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2009.csv"
+            },
+            {
+                "sheet_name": "MeadBB2009",
+                "location": "Mead",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"Chemical": "control"},
+                "max_observed_buds": 10,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2009.csv"
+            }
+        ]
+    },
+    "Hydrogen cyanamide alternatives - a systems approach - Year 3.xlsx": {
+        "sheets": [
+            {
+                "sheet_name": "KatoaBB2010",
+                "location": "Katoa",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"Chemical": "control"},
+                "max_observed_buds": 10,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2010.csv"
+            },
+            {
+                "sheet_name": "MeadBB2010",
+                "location": "Mead",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"Chemical": "control"},
+                "max_observed_buds": 8,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2010.csv"
+            },
+            {
+                "sheet_name": "NBB2010",
+                "location": "Kerikeri",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"Chemical": "control"},
+                "max_observed_buds": 12,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2010.csv"
+            }
+        ]
+    }        
 
 }
