@@ -114,6 +114,18 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2010.csv"
             }
         ]
-    }        
+    },
+    "Hydrogen cyanamide alternatives - a systems approach - Year 4.xlsx": {
+        "sheets": [
+            {
+                "sheet_name": "NBB2011",
+                "location": "Kerikeri",
+                "cultivar": {"CV": "HW"},
+                "treatments": {"Chemical": "control"},
+                "max_observed_buds": 8,
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2011.csv"
+            }
+        ]
+    }           
 
 }
