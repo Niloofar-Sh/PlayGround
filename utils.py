@@ -116,14 +116,13 @@ def calculate_fit_stats(original_values, fitted_values):
     rmse = np.sqrt(mse) # Easier to interpret (same unit as data)
     mae = mean_absolute_error(original_values, fitted_values) # Measures absolute errors
     r2 = r2_score(original_values, fitted_values) # Explains variance (0-1 range), closer to 1 is better
-    nrmse = rmse / (original_values.max() - original_values.min()) # Typically, NRMSE < 0.1 is considered a good fit
+    nrmse = rmse / (np.max(original_values) - np.min(original_values)) # Typically, NRMSE < 0.1 is considered a good fit
     # Return results as a dictionary
     return {
-        "MSE": mse,
-        "RMSE": rmse,
-        "MAE": mae,
-        "R2": r2,
-        "NRMSE": nrmse
+        "RMSE": float(round(rmse,2)),
+        "MAE": float(round(mae,2)),
+        "R2": float(round(r2,2)),
+        "NRMSE": float(round(nrmse,2))
     }
 
 def BB_specifications(df_doy_cols, max_observed_buds):
@@ -138,3 +137,50 @@ def split_phrase(phrase):
         return phrase.split("_")  # Split by underscore
     else:
         return [phrase, phrase] # repeat the treatmnet name for both the experiment and treatment
+    
+def seasonal_ave_fillna(df):
+
+    # Define seasons based on the Southern Hemisphere
+    seasons = {
+        "Summer": list(range(355, 367)) + list(range(1, 80)),  # Dec 21 - Mar 20
+        "Autumn": list(range(80, 172)),  # Mar 21 - Jun 20
+        "Winter": list(range(172, 266)),  # Jun 21 - Sep 22
+        "Spring": list(range(266, 355)),  # Sep 23 - Dec 20
+    }
+
+    # Compute seasonal averages
+    seasonal_averages = {}
+    for season, days in seasons.items():
+        seasonal_averages[season] = df[df['doy'].isin(days)]['temp'].mean()
+
+    # Fill missing values based on season
+    def fill_missing(day):
+        for season, days in seasons.items():
+            if day in days:
+                return seasonal_averages[season]
+
+    df.loc[df['temp'].isna(), 'temp'] = df['doy'].apply(fill_missing)
+
+    return df
+
+#---------------------------------------------------------------------
+#Function to create the default configuration for the model. This will be overridden as 
+#required during experimentation
+#---------------------------------------------------------------------
+def base_model_config():
+    model_config = {
+            "Tc_chill": 18, # chill model
+            "MinTemp": 7, # WangEngel model
+            "OptTemp": 20, # WangEngel model
+            "MaxTemp": 25, # WangEngel model
+            "Tb_GDH": 9, # GDH model
+            "Tu_GDH": 20, # GDH model
+            "Tc_GDH": 25, # GDH model
+            "ChillRequirement" : 900,
+            "HeatRequirement" : 500,
+            "InterpolationMethod": 'linear',
+            "HeatAccFunc": 'WangEngel'
+
+
+            }
+    return model_config
