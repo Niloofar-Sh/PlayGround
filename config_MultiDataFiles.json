@@ -186,6 +186,43 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2018.csv"
             }
         ] 
-    }                 
+    },  
+    "Investigating Hi-Cane alternatives 2019-20.KK.xlsx": {
+            "sheets": [
+                {
+                    "sheet_name": "HaywardBB2019",
+                    "location": "Kerikeri",
+                    "cultivar": {"CV": "HW"},
+                    "treatments": {"Chemical": "Untreated control"},
+                    "max_observed_buds": 12,
+                    "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2019.csv"
+                }
+            ] 
+        },  
+        "KRC_Paint_G3HW__2020_SamplingData.xlsx": {
+                "sheets": [
+                    {
+                        "sheet_name": "HWBBRaw2020",
+                        "location": "Kerikeri",
+                        "cultivar": {"CV": "HW"},
+                        "treatments": {"Chemical": "Control"},
+                        "max_observed_buds": 7,
+                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2020.csv"
+                    }
+                ] 
+        },
+        "KRC_Paint_HW_2021_SamplingData.xlsx": {
+            "sheets": [
+                    {
+                        "sheet_name": "HWBBRaw2021",
+                        "location": "Kerikeri",
+                        "cultivar": {"CV": "HW"},
+                        "treatments": {"Chemical": "Control"},
+                        "max_observed_buds": 8,
+                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2021.csv"
+                    }
+                ] 
+        }
 
 }
+

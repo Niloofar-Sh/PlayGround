@@ -125,8 +125,9 @@ def calculate_fit_stats(original_values, fitted_values):
         "NRMSE": float(round(nrmse,2))
     }
 
-def BB_specifications(df_doy_cols, max_observed_buds):
+def BB_specifications(df_doy_cols):
     # return the proportion of bud break and median number of broken buds    
+    max_observed_buds = round(df_doy_cols.iloc[:,-1].max()*1.2)
     BudBurstDOY = [col for col in df_doy_cols.columns if df_doy_cols[col].median()  > 0.05*max_observed_buds][0]
     return [round(bud/max_observed_buds,2) for bud in df_doy_cols.median().values], [round(bud,2) for bud in df_doy_cols.median().values], BudBurstDOY
 
