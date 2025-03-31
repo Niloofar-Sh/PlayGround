@@ -171,7 +171,7 @@ def seasonal_ave_fillna(df):
 def base_model_config():
     model_config = {
             "Tc_chill": 18, # chill model
-            "MinTemp": 7, # WangEngel model
+            "MinTemp": 8, # WangEngel model
             "OptTemp": 20, # WangEngel model
             "MaxTemp": 25, # WangEngel model
             "Tb_GDH": 9, # GDH model
