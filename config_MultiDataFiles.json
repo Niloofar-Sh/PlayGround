@@ -222,6 +222,18 @@
                         "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2021.csv"
                     }
                 ] 
+        },
+        "KRC_Paint_HW_G3_2022_SamplingData.xlsx": {
+            "sheets": [
+                    {
+                        "sheet_name": "HWBBRaw2022",
+                        "location": "Kerikeri",
+                        "cultivar": {"CV": "HW"},
+                        "treatments": {"Chemical": "Control"},
+                        "max_observed_buds": 8,
+                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2022.csv"
+                    }
+                ] 
         }
 
 }
