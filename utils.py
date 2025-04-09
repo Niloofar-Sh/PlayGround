@@ -117,18 +117,26 @@ def calculate_fit_stats(original_values, fitted_values):
     mae = mean_absolute_error(original_values, fitted_values) # Measures absolute errors
     r2 = r2_score(original_values, fitted_values) # Explains variance (0-1 range), closer to 1 is better
     nrmse = rmse / (np.max(original_values) - np.min(original_values)) # Typically, NRMSE < 0.1 is considered a good fit
+    msd = np.mean((np.array(original_values) - np.array(fitted_values)) ** 2)
     # Return results as a dictionary
     return {
         "RMSE": float(round(rmse,2)),
         "MAE": float(round(mae,2)),
         "R2": float(round(r2,2)),
-        "NRMSE": float(round(nrmse,2))
+        "NRMSE": float(round(nrmse,2)),
+        'MSD': float(round(msd,2))
     }
 
-def BB_specifications(df_doy_cols):
-    # return the proportion of bud break and median number of broken buds    
-    max_observed_buds = round(df_doy_cols.iloc[:,-1].max()*1.2)
-    BudBurstDOY = [col for col in df_doy_cols.columns if df_doy_cols[col].median()  > 0.05*max_observed_buds][0]
+def BB_specifications(location,df_doy_cols):
+    # return the proportion of bud break and median number of broken buds  
+    if location == "Kerikeri":
+        max_observed_buds = df_doy_cols.iloc[:,-1].median() / .4
+    elif location == "Te Puke":
+        max_observed_buds = df_doy_cols.iloc[:,-1].median() / .6
+    try:
+        BudBurstDOY = [col for col in df_doy_cols.columns if df_doy_cols[col].median()  > 0.05*max_observed_buds][0]
+    except:
+        print('*****************EMPTY DATAFRAME PASSED TO BB_specifications******************')
     return [round(bud/max_observed_buds,2) for bud in df_doy_cols.median().values], [round(bud,2) for bud in df_doy_cols.median().values], BudBurstDOY
 
 def split_phrase(phrase):
@@ -164,20 +172,27 @@ def seasonal_ave_fillna(df):
 
     return df
 
+
+
+
+
+
 #---------------------------------------------------------------------
 #Function to create the default configuration for the model. This will be overridden as 
 #required during experimentation
 #---------------------------------------------------------------------
 def base_model_config():
     model_config = {
+            "StartDayKK" : '2000-01-20', # start accumulation of chill units in Kerikeri (year selection does not matter here)
+            "StartDayTP" : '2000-02-14', # start accumulation of chill units in Te Puke (year selection does not matter here)
             "Tc_chill": 18, # chill model
             "MinTemp": 8, # WangEngel model
             "OptTemp": 20, # WangEngel model
             "MaxTemp": 25, # WangEngel model
-            "Tb_GDH": 9, # GDH model
-            "Tu_GDH": 20, # GDH model
+            "Tb_GDH": 8, # GDH model
+            "Tu_GDH": 21, # GDH model
             "Tc_GDH": 25, # GDH model
-            "ChillRequirement" : 900,
+            "ChillRequirement" : 950,
             "HeatRequirement" : 500,
             "InterpolationMethod": 'linear',
             "HeatAccFunc": 'WangEngel'

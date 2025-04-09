@@ -7,7 +7,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control early"},
                 "max_observed_buds": 13,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2016.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "TPROB4BB2016",
@@ -15,7 +15,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control late"},
                 "max_observed_buds": 10,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2016.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
         ]
     },
@@ -27,7 +27,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Con1"},
                 "max_observed_buds": 15,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2015.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "HaywardTPBB",
@@ -35,7 +35,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Con2"},
                 "max_observed_buds": 13,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2015.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "HaywardKKBB",
@@ -43,7 +43,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control"},
                 "max_observed_buds": 10,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2015.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
         ]
     },
@@ -51,19 +51,19 @@
         "sheets": [
             {
                 "sheet_name": "KatoaBB2008",
-                "location": "Katoa",
+                "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
                 "max_observed_buds": 11,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2008.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "MeadBB2008",
-                "location": "Mead",
+                "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
                 "max_observed_buds": 10,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2008.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
         ]
     },
@@ -71,19 +71,19 @@
         "sheets": [
             {
                 "sheet_name": "KatoaBB2009",
-                "location": "Katoa",
+                "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
                 "max_observed_buds": 13,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2009.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "MeadBB2009",
-                "location": "Mead",
+                "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
                 "max_observed_buds": 10,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2009.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
         ]
     },
@@ -91,19 +91,19 @@
         "sheets": [
             {
                 "sheet_name": "KatoaBB2010",
-                "location": "Katoa",
+                "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
                 "max_observed_buds": 10,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2010.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "MeadBB2010",
-                "location": "Mead",
+                "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
                 "max_observed_buds": 8,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2010.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "NBB2010",
@@ -111,7 +111,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
                 "max_observed_buds": 12,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2010.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
         ]
     },
@@ -123,7 +123,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
                 "max_observed_buds": 8,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2011.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
         ]
     },
@@ -135,7 +135,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Control"},
                 "max_observed_buds": 8,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2007.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "TPROBB2007",
@@ -143,7 +143,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Control"},
                 "max_observed_buds": 10,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2007.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
         ] 
     },
@@ -155,7 +155,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Co"},
                 "max_observed_buds": 12,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2013.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "KKHaywardBB2013",
@@ -163,7 +163,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Co"},
                 "max_observed_buds": 8,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2013.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
         ] 
     },
@@ -175,7 +175,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Control"},
                 "max_observed_buds": 8,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2018.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
                 "sheet_name": "KKHaywardBB2018",
@@ -183,7 +183,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Untreated Control"},
                 "max_observed_buds": 7,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_TePuke_2018.csv"
+                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
         ] 
     },  
@@ -195,7 +195,7 @@
                     "cultivar": {"CV": "HW"},
                     "treatments": {"Chemical": "Untreated control"},
                     "max_observed_buds": 12,
-                    "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2019.csv"
+                    "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                 }
             ] 
         },  
@@ -207,7 +207,7 @@
                         "cultivar": {"CV": "HW"},
                         "treatments": {"Chemical": "Control"},
                         "max_observed_buds": 7,
-                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2020.csv"
+                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                     }
                 ] 
         },
@@ -219,7 +219,7 @@
                         "cultivar": {"CV": "HW"},
                         "treatments": {"Chemical": "Control"},
                         "max_observed_buds": 8,
-                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2021.csv"
+                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                     }
                 ] 
         },
@@ -231,9 +231,33 @@
                         "cultivar": {"CV": "HW"},
                         "treatments": {"Chemical": "Control"},
                         "max_observed_buds": 8,
-                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/MetWatch_Hr_Kerikeri_2022.csv"
+                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                     }
                 ] 
+        }, 
+        "KRC_Spray_G3HW_2020_SamplingData.xlsx": {
+            "sheets": [
+                    {
+                        "sheet_name": "HWBBSpray2020",
+                        "location": "Kerikeri",
+                        "cultivar": {"CV": "HW"},
+                        "treatments": {"Chemical": "Untreated control"},
+                        "max_observed_buds": 8,
+                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
+                    }
+                ] 
+        },
+        "TPRO_Paint_HW_2020_SamplingData.xlsx": {
+            "sheets": [
+                {
+                    "sheet_name": "HW-Budbreak2020",
+                    "location": "Kerikeri",
+                    "cultivar": {"CV": "HW"},
+                    "treatments": {"Chemical": "Control"},
+                    "max_observed_buds": 8,
+                    "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
+                }
+            ]             
         }
 
 }
