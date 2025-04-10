@@ -137,7 +137,7 @@ def BB_specifications(location,df_doy_cols):
         BudBurstDOY = [col for col in df_doy_cols.columns if df_doy_cols[col].median()  > 0.05*max_observed_buds][0]
     except:
         print('*****************EMPTY DATAFRAME PASSED TO BB_specifications******************')
-    return [round(bud/max_observed_buds,2) for bud in df_doy_cols.median().values], [round(bud,2) for bud in df_doy_cols.median().values], BudBurstDOY
+    return [round(bud/max_observed_buds,2) for bud in df_doy_cols.median().values], [round(bud,2) for bud in df_doy_cols.median().values], BudBurstDOY, max_observed_buds
 
 def split_phrase(phrase):
     if " " in phrase:
@@ -183,20 +183,21 @@ def seasonal_ave_fillna(df):
 #---------------------------------------------------------------------
 def base_model_config():
     model_config = {
-            "StartDayKK" : '2000-01-20', # start accumulation of chill units in Kerikeri (year selection does not matter here)
-            "StartDayTP" : '2000-02-14', # start accumulation of chill units in Te Puke (year selection does not matter here)
-            "Tc_chill": 18, # chill model
-            "MinTemp": 8, # WangEngel model
-            "OptTemp": 20, # WangEngel model
-            "MaxTemp": 25, # WangEngel model
+            "StartDayTP" : '2000-02-27', # start accumulation of chill units in Te Puke (year selection does not matter here)
+            "StartDayKK" : '2000-02-20', # start accumulation of chill units in Kerikeri (year selection does not matter here)
+            "Tc_chill": 17.49, # chill model
+            "MinTemp": 7.10, # WangEngel model
+            "OptTemp": 24.24, # WangEngel model
+            "MaxTemp": 33.96, # WangEngel model
             "Tb_GDH": 8, # GDH model
             "Tu_GDH": 21, # GDH model
             "Tc_GDH": 25, # GDH model
-            "ChillRequirement" : 950,
-            "HeatRequirement" : 500,
+            "ChillRequirement" : 990.19,
+            "HeatRequirement" : 476.67,
             "InterpolationMethod": 'linear',
             "HeatAccFunc": 'WangEngel'
 
 
             }
     return model_config
+
