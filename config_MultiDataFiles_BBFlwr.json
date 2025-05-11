@@ -2,7 +2,8 @@
     "Budbreak Enhancers for Organic orchards 2016.xlsx": {
         "sheets": [
             {
-                "sheet_name": "TPROB4BB2016",
+                "BB_sheet_name": "TPROB4BB2016",
+                "Flwr_sheet_name": "TPROB4Flowering2016",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control early"},
@@ -10,7 +11,8 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
-                "sheet_name": "TPROB4BB2016",
+                "BB_sheet_name": "TPROB4BB2016",
+                "Flwr_sheet_name": "TPROB4Flowering2016",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control late"},
@@ -22,7 +24,8 @@
     "Development of a tool to predict.xlsx": {
         "sheets": [
             {
-                "sheet_name": "HaywardTPBB",
+                "BB_sheet_name": "HaywardTPBB",
+                "Flwr_sheet_name": "HaywardTPFlowering",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Con1"},
@@ -30,7 +33,8 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
-                "sheet_name": "HaywardTPBB",
+                "BB_sheet_name": "HaywardTPBB",
+                "Flwr_sheet_name": "HaywardTPFlowering",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Con2"},
@@ -38,7 +42,8 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
-                "sheet_name": "HaywardKKBB",
+                "BB_sheet_name": "HaywardKKBB",
+                "Flwr_sheet_name": "HaywardKKFlowering",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"TrtCombination": "Control"},
@@ -50,7 +55,8 @@
     "Hydrogen cyanamide alternatives - a systems approach - Year 1.xlsx": {
         "sheets": [
             {
-                "sheet_name": "KatoaBB2008",
+                "BB_sheet_name": "KatoaBB2008",
+                "Flwr_sheet_name": "KatoaFlowering2008",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
@@ -58,7 +64,8 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
-                "sheet_name": "MeadBB2008",
+                "BB_sheet_name": "MeadBB2008",
+                "Flwr_sheet_name": "MeadFlowering2008",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
@@ -70,7 +77,8 @@
     "Hydrogen cyanamide alternatives - a systems approach - Year 2.xlsx": {
         "sheets": [
             {
-                "sheet_name": "KatoaBB2009",
+                "BB_sheet_name": "KatoaBB2009",
+                "Flwr_sheet_name": "KatoaFlowering2009",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
@@ -78,7 +86,8 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
-                "sheet_name": "MeadBB2009",
+                "BB_sheet_name": "MeadBB2009",
+                "Flwr_sheet_name": "MeadFlowering2009",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
@@ -90,7 +99,8 @@
     "Hydrogen cyanamide alternatives - a systems approach - Year 3.xlsx": {
         "sheets": [
             {
-                "sheet_name": "KatoaBB2010",
+                "BB_sheet_name": "KatoaBB2010",
+                "Flwr_sheet_name": "KatoaFlowering2010",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
@@ -98,7 +108,8 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
-                "sheet_name": "MeadBB2010",
+                "BB_sheet_name": "MeadBB2010",
+                "Flwr_sheet_name": "MeadFlowering2010",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
@@ -106,7 +117,8 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
-                "sheet_name": "NBB2010",
+                "BB_sheet_name": "NBB2010",
+                "Flwr_sheet_name": "NFlowering2010",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
@@ -118,7 +130,8 @@
     "Hydrogen cyanamide alternatives - a systems approach - Year 4.xlsx": {
         "sheets": [
             {
-                "sheet_name": "NBB2011",
+                "BB_sheet_name": "NBB2011",
+                "Flwr_sheet_name": "NFlowering2011",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "control"},
@@ -127,30 +140,11 @@
             }
         ]
     },
-    "Hydrogen cyanamide alternatives 2007.xlsx": {
-       "sheets": [
-            {
-                "sheet_name": "TeMaraBB2007",
-                "location": "Te Puke",
-                "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "Control"},
-                "max_observed_buds": 8,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
-            },
-            {
-                "sheet_name": "TPROBB2007",
-                "location": "Te Puke",
-                "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "Control"},
-                "max_observed_buds": 10,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
-            }
-        ] 
-    },
     "Identifying commercial recommendations for agrochemical alternatives.xlsx": {
         "sheets": [
             {
-                "sheet_name": "TPHaywardBB2013",
+                "BB_sheet_name": "TPHaywardBB2013",
+                "Flwr_sheet_name": "TPHaywardFlowering2013",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Co"},
@@ -158,7 +152,8 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
-                "sheet_name": "KKHaywardBB2013",
+                "BB_sheet_name": "KKHaywardBB2013",
+                "Flwr_sheet_name": "KKHaywardFlowering2013",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Co"},
@@ -170,7 +165,8 @@
     "Investigating Hi-Cane alternatives 2018-19.xlsx": {
         "sheets": [
             {
-                "sheet_name": "TPHaywardBB2018",
+                "BB_sheet_name": "TPHaywardBB2018",
+                "Flwr_sheet_name": "TPHaywardFlowering2018",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Control"},
@@ -178,7 +174,8 @@
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
             {
-                "sheet_name": "KKHaywardBB2018",
+                "BB_sheet_name": "KKHaywardBB2018",
+                "Flwr_sheet_name": "KKHaywardFlowering2018",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "Untreated Control"},
@@ -190,7 +187,8 @@
     "Investigating Hi-Cane alternatives 2019-20.KK.xlsx": {
             "sheets": [
                 {
-                    "sheet_name": "HaywardBB2019",
+                    "BB_sheet_name": "HaywardBB2019",
+                    "Flwr_sheet_name": "HaywardFlowering2019",
                     "location": "Kerikeri",
                     "cultivar": {"CV": "HW"},
                     "treatments": {"Chemical": "Untreated control"},
@@ -202,7 +200,8 @@
         "KRC_Paint_G3HW__2020_SamplingData.xlsx": {
                 "sheets": [
                     {
-                        "sheet_name": "HWBBRaw2020",
+                        "BB_sheet_name": "HWBBRaw2020",
+                        "Flwr_sheet_name": "HWFlwrRaw",
                         "location": "Kerikeri",
                         "cultivar": {"CV": "HW"},
                         "treatments": {"Chemical": "Control"},
@@ -211,34 +210,11 @@
                     }
                 ] 
         },
-        "KRC_Paint_HW_2021_SamplingData.xlsx": {
-            "sheets": [
-                    {
-                        "sheet_name": "HWBBRaw2021",
-                        "location": "Kerikeri",
-                        "cultivar": {"CV": "HW"},
-                        "treatments": {"Chemical": "Control"},
-                        "max_observed_buds": 8,
-                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
-                    }
-                ] 
-        },
-        "KRC_Paint_HW_G3_2022_SamplingData.xlsx": {
-            "sheets": [
-                    {
-                        "sheet_name": "HWBBRaw2022",
-                        "location": "Kerikeri",
-                        "cultivar": {"CV": "HW"},
-                        "treatments": {"Chemical": "Control"},
-                        "max_observed_buds": 8,
-                        "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
-                    }
-                ] 
-        }, 
         "KRC_Spray_G3HW_2020_SamplingData.xlsx": {
             "sheets": [
                     {
-                        "sheet_name": "HWBBSpray2020",
+                        "BB_sheet_name": "HWBBSpray2020",
+                        "Flwr_sheet_name": "HWFlwrRaw",
                         "location": "Kerikeri",
                         "cultivar": {"CV": "HW"},
                         "treatments": {"Chemical": "Untreated control"},
@@ -250,7 +226,8 @@
         "TPRO_Paint_HW_2020_SamplingData.xlsx": {
             "sheets": [
                 {
-                    "sheet_name": "HW-Budbreak2020",
+                    "BB_sheet_name": "HW-Budbreak2020",
+                    "Flwr_sheet_name": "HW-Flowering",
                     "location": "Kerikeri",
                     "cultivar": {"CV": "HW"},
                     "treatments": {"Chemical": "Control"},

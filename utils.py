@@ -130,14 +130,19 @@ def calculate_fit_stats(original_values, fitted_values):
 def BB_specifications(location,df_doy_cols):
     # return the proportion of bud break and median number of broken buds  
     if location == "Kerikeri":
-        max_observed_buds = df_doy_cols.iloc[:,-1].median() / .4
+        max_observed_buds = df_doy_cols.iloc[:,-1].median() / .33
     elif location == "Te Puke":
-        max_observed_buds = df_doy_cols.iloc[:,-1].median() / .6
+        max_observed_buds = df_doy_cols.iloc[:,-1].median() / .5
     try:
         BudBurstDOY = [col for col in df_doy_cols.columns if df_doy_cols[col].median()  > 0.05*max_observed_buds][0]
     except:
         print('*****************EMPTY DATAFRAME PASSED TO BB_specifications******************')
     return [round(bud/max_observed_buds,2) for bud in df_doy_cols.median().values], [round(bud,2) for bud in df_doy_cols.median().values], BudBurstDOY, max_observed_buds
+
+def Flwr_specifications(MaxBB, df_doy_cols):
+    FlwrDOY = [col for col in df_doy_cols.columns if df_doy_cols[col].median()  > 0.05*MaxBB][0]
+    return FlwrDOY
+
 
 def split_phrase(phrase):
     if " " in phrase:
@@ -183,17 +188,17 @@ def seasonal_ave_fillna(df):
 #---------------------------------------------------------------------
 def base_model_config():
     model_config = {
-            "StartDayTP" : '2000-02-27', # start accumulation of chill units in Te Puke (year selection does not matter here)
-            "StartDayKK" : '2000-02-20', # start accumulation of chill units in Kerikeri (year selection does not matter here)
-            "Tc_chill": 17.49, # chill model
-            "MinTemp": 7.10, # WangEngel model
-            "OptTemp": 24.24, # WangEngel model
-            "MaxTemp": 33.96, # WangEngel model
+            "StartDay" : '2000-05-24', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
+            "Tc_chill": 15.9, # chill model
+            "MinTemp": 7, # WangEngel model
+            "OptTemp": 17, # WangEngel model
+            "MaxTemp": 34.6, # WangEngel model
             "Tb_GDH": 8, # GDH model
             "Tu_GDH": 21, # GDH model
             "Tc_GDH": 25, # GDH model
-            "ChillRequirement" : 990.19,
-            "HeatRequirement" : 476.67,
+            "ChillRequirement" : 1537,
+            "HeatRequirement" : 578,
+            "FlwrHeatRequirement" : 900,
             "InterpolationMethod": 'linear',
             "HeatAccFunc": 'WangEngel'
 
