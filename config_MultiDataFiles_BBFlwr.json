@@ -197,6 +197,7 @@
                 }
             ] 
         },  
+
         "KRC_Paint_G3HW__2020_SamplingData.xlsx": {
                 "sheets": [
                     {
@@ -228,6 +229,45 @@
                 {
                     "BB_sheet_name": "HW-Budbreak2020",
                     "Flwr_sheet_name": "HW-Flowering",
+                    "location": "Kerikeri",
+                    "cultivar": {"CV": "HW"},
+                    "treatments": {"Chemical": "Control"},
+                    "max_observed_buds": 8,
+                    "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
+                }
+            ]             
+        },
+        "TPRO_Paint_HW_2021_SamplingData.xlsx": {
+            "sheets": [
+                {
+                    "BB_sheet_name": "HWBBRawKK2021",
+                    "Flwr_sheet_name": "HWFlwrRawKK2021",
+                    "location": "Kerikeri",
+                    "cultivar": {"CV": "HW"},
+                    "treatments": {"Chemical": "Control"},
+                    "max_observed_buds": 8,
+                    "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
+                }
+            ]             
+        },
+        "TPRO_Paint_HW_G3_2022_SamplingData.xlsx": {
+            "sheets": [
+                {
+                    "BB_sheet_name": "HWBBRawKK2022",
+                    "Flwr_sheet_name": "HWFlwRawKK2022",
+                    "location": "Kerikeri",
+                    "cultivar": {"CV": "HW"},
+                    "treatments": {"Chemical": "Control"},
+                    "max_observed_buds": 8,
+                    "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
+                }
+            ]             
+        },
+        "TPRO_Spray_HW_2020_SamplingData.xlsx": {
+            "sheets": [
+                {
+                    "BB_sheet_name": "HW-Budbreak-KK2020",
+                    "Flwr_sheet_name": "HW-Flowering-KK2020",
                     "location": "Kerikeri",
                     "cultivar": {"CV": "HW"},
                     "treatments": {"Chemical": "Control"},

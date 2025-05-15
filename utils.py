@@ -62,17 +62,18 @@ def find_daily_diff(df):
     diff_daily.iloc[:, 1:] = diff_daily.iloc[:, 1:].values - diff_daily.iloc[:, :-1].values
     return diff_daily
 
+# Define the logistic function
+def logistic(x, L, k, x0):
+    # Provide initial guesses for parameters L, k, x0
+    return L / (1 + np.exp(-k * (x - x0)))
+
 def logistic_fit(x,y):
-    # Define the logistic function
-    def logistic(x, L, k, x0):
-        # Provide initial guesses for parameters L, k, x0
-        return L / (1 + np.exp(-k * (x - x0)))
     initial_guess = [8, 1, 4]
     # Fit the curve
     popt, _ = curve_fit(logistic, x, y, p0=initial_guess, bounds=(0, np.inf))
     # Use the fitted parameters to compute the model predictions
     y_fit = logistic(x, *popt)  
-    return y_fit
+    return y_fit, popt
 
 def beta_fit(x,y):
     # Define the scaled beta function for fitting
@@ -127,20 +128,41 @@ def calculate_fit_stats(original_values, fitted_values):
         'MSD': float(round(msd,2))
     }
 
-def BB_specifications(location,df_doy_cols):
+def BB_specifications(location,df_doy_cols,BB_percent=False):
     # return the proportion of bud break and median number of broken buds  
-    if location == "Kerikeri":
-        max_observed_buds = df_doy_cols.iloc[:,-1].median() / .33
+    if BB_percent:
+        assumed_bb_percent = BB_percent
+    elif location == "Kerikeri":
+        assumed_bb_percent = .33
     elif location == "Te Puke":
-        max_observed_buds = df_doy_cols.iloc[:,-1].median() / .5
-    try:
-        BudBurstDOY = [col for col in df_doy_cols.columns if df_doy_cols[col].median()  > 0.05*max_observed_buds][0]
-    except:
-        print('*****************EMPTY DATAFRAME PASSED TO BB_specifications******************')
-    return [round(bud/max_observed_buds,2) for bud in df_doy_cols.median().values], [round(bud,2) for bud in df_doy_cols.median().values], BudBurstDOY, max_observed_buds
+        assumed_bb_percent = .5
+    max_observed_buds = df_doy_cols.iloc[:,-1].median() / assumed_bb_percent
+
+    # fit a sigmoid to budbreak observations
+    _, logistic_params = logistic_fit(range(0,len(df_doy_cols.columns)), df_doy_cols.median().values)
+    bb_start_val = round(.05 * df_doy_cols.iloc[:,-1].median(),1)
+    full_range_doy = np.arange(df_doy_cols.columns[0], df_doy_cols.columns[-1]+1,1)
+    y_fit = logistic(range(0,len(full_range_doy)), *logistic_params) 
+    BudBurstDOY = full_range_doy[y_fit > bb_start_val][0]
+
+    PBB = [round(bud/df_doy_cols.iloc[:,-1].median(),2) for bud in df_doy_cols.median().values] 
+    BB = [bud for bud in df_doy_cols.median().values]
+
+
+    # try:
+    #     valid_cols = [col for col in df_doy_cols.columns if df_doy_cols[col].median()  > round(0.05*max_observed_buds)]
+    #     BudBurstDOY = valid_cols[0] if valid_cols else [col for col in df_doy_cols.columns if df_doy_cols[col].mean()  > round(0.05*max_observed_buds)]
+    # except:
+    #     print('*****************EMPTY DATAFRAME PASSED TO BB_specifications******************')
+    # PBB = [round(bud/max_observed_buds,2) for bud in df_doy_cols.median().values] 
+    # BB = [bud for bud in df_doy_cols.median().values]
+
+    # print(location, ' :', BudBurstDOY, bb_start_val, df_doy_cols.iloc[:,-1].median())
+    return PBB, BB, BudBurstDOY, max_observed_buds
 
 def Flwr_specifications(MaxBB, df_doy_cols):
-    FlwrDOY = [col for col in df_doy_cols.columns if df_doy_cols[col].median()  > 0.05*MaxBB][0]
+    valid_cols = [col for col in df_doy_cols.columns if df_doy_cols[col].median() > round(0.05 * MaxBB)]
+    FlwrDOY = valid_cols[0] if valid_cols else [col for col in df_doy_cols.columns if df_doy_cols[col].mean() > round(0.05 * MaxBB)][0]
     return FlwrDOY
 
 
@@ -188,16 +210,16 @@ def seasonal_ave_fillna(df):
 #---------------------------------------------------------------------
 def base_model_config():
     model_config = {
-            "StartDay" : '2000-05-24', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
+            "StartDay" : '2000-05-1', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
             "Tc_chill": 15.9, # chill model
-            "MinTemp": 7, # WangEngel model
-            "OptTemp": 17, # WangEngel model
-            "MaxTemp": 34.6, # WangEngel model
+            "MinTemp": 8.3, # WangEngel model
+            "OptTemp": 10, # WangEngel model
+            "MaxTemp": 34, # WangEngel model
             "Tb_GDH": 8, # GDH model
             "Tu_GDH": 21, # GDH model
             "Tc_GDH": 25, # GDH model
-            "ChillRequirement" : 1537,
-            "HeatRequirement" : 578,
+            "ChillRequirement" : 1081,
+            "HeatRequirement" : 975,
             "FlwrHeatRequirement" : 900,
             "InterpolationMethod": 'linear',
             "HeatAccFunc": 'WangEngel'
