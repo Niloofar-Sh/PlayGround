@@ -139,9 +139,17 @@ def BB_specifications(location,df_doy_cols,BB_percent=False):
     max_observed_buds = df_doy_cols.iloc[:,-1].median() / assumed_bb_percent
 
     # fit a sigmoid to budbreak observations
-    _, logistic_params = logistic_fit(range(0,len(df_doy_cols.columns)), df_doy_cols.median().values)
+    first_doy = [col for col in df_doy_cols.columns if df_doy_cols[col].mean()>0][0]
+    start_idx = df_doy_cols.columns.get_loc(first_doy)
+    
+
+    y_vals = df_doy_cols.iloc[:, start_idx:].median().values
+    x_vals = range(len(y_vals))
+
+    _, logistic_params = logistic_fit(x_vals, y_vals)
     bb_start_val = round(.05 * df_doy_cols.iloc[:,-1].median(),1)
-    full_range_doy = np.arange(df_doy_cols.columns[0], df_doy_cols.columns[-1]+1,1)
+    
+    full_range_doy = np.arange(first_doy, df_doy_cols.columns[-1]+1,1)
     y_fit = logistic(range(0,len(full_range_doy)), *logistic_params) 
     BudBurstDOY = full_range_doy[y_fit > bb_start_val][0]
 
