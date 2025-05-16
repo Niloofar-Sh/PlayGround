@@ -138,10 +138,21 @@ def BB_specifications(location,df_doy_cols,BB_percent=False):
         assumed_bb_percent = .5
     max_observed_buds = df_doy_cols.iloc[:,-1].median() / assumed_bb_percent
 
+
+
+
     # fit a sigmoid to budbreak observations
-    _, logistic_params = logistic_fit(range(0,len(df_doy_cols.columns)), df_doy_cols.median().values)
+    first_doy = [col for col in df_doy_cols.columns if df_doy_cols[col].mean()>0][0]
+    start_idx = df_doy_cols.columns.get_loc(first_doy)
+    
+
+    y_vals = df_doy_cols.iloc[:, start_idx:].median().values
+    x_vals = range(len(y_vals))
+
+    _, logistic_params = logistic_fit(x_vals, y_vals)
     bb_start_val = round(.05 * df_doy_cols.iloc[:,-1].median(),1)
-    full_range_doy = np.arange(df_doy_cols.columns[0], df_doy_cols.columns[-1]+1,1)
+    
+    full_range_doy = np.arange(first_doy, df_doy_cols.columns[-1]+1,1)
     y_fit = logistic(range(0,len(full_range_doy)), *logistic_params) 
     BudBurstDOY = full_range_doy[y_fit > bb_start_val][0]
 
@@ -203,6 +214,32 @@ def seasonal_ave_fillna(df):
 
 
 
+def ChillModel(T, T1, T2, T_hi, T_lo, c1):
+    # T1 = 2.45
+    # T2 = 21
+    # T_hi = 16.45
+    # T_lo = -40.82
+    # c1 = 0.000411
+
+    if T < T1 : chill_unit = 0
+    if (T >= T1) and (T <= T2): chill_unit = c1 * (T_hi - T) * (T - T_lo)
+    if (T > T2): chill_unit =  c1 * (T_hi - T2) * (T2 - T_lo)
+
+    return chill_unit
+
+def HeatModel(T, T_base, r):
+    # T_base = 2
+    # r = 0.0002924
+    if T < T_base: heat_unit = 0
+    if T >= T_base: heat_unit = r * (T - T_base)
+    return heat_unit
+
+def W(S,k):
+    # k = 4
+    Weight = ((1+np.exp(-.5*k))/(1+np.exp(-k*(S-.5)))) * ((1-np.exp(-k*S))/(1-np.exp(-k)))
+    return Weight
+
+
 
 #---------------------------------------------------------------------
 #Function to create the default configuration for the model. This will be overridden as 
@@ -210,7 +247,7 @@ def seasonal_ave_fillna(df):
 #---------------------------------------------------------------------
 def base_model_config():
     model_config = {
-            "StartDay" : '2000-05-1', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
+            "StartDay" : '2000-03-21', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
             "Tc_chill": 15.9, # chill model
             "MinTemp": 8.3, # WangEngel model
             "OptTemp": 10, # WangEngel model
@@ -222,7 +259,15 @@ def base_model_config():
             "HeatRequirement" : 975,
             "FlwrHeatRequirement" : 900,
             "InterpolationMethod": 'linear',
-            "HeatAccFunc": 'WangEngel'
+            "HeatAccFunc": 'WangEngel',
+            "T1": 2.45,
+            "T2": 21,
+            "T_hi": 16.45,
+            "T_lo": -40.82,
+            "c1":  0.000411/81.903185,
+            "T_base": 2,
+            "r": 0.0002924/75.95193273,
+            'k': 4
 
 
             }
