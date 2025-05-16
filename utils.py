@@ -212,14 +212,14 @@ def base_model_config():
     model_config = {
             "StartDay" : '2000-05-1', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
             "Tc_chill": 15.9, # chill model
-            "MinTemp": 8.3, # WangEngel model
+            "MinTemp": 7.786, # WangEngel model
             "OptTemp": 10, # WangEngel model
-            "MaxTemp": 34, # WangEngel model
+            "MaxTemp": 25.45, # WangEngel model
             "Tb_GDH": 8, # GDH model
             "Tu_GDH": 21, # GDH model
             "Tc_GDH": 25, # GDH model
-            "ChillRequirement" : 1081,
-            "HeatRequirement" : 975,
+            "ChillRequirement" : 1076.02966187,
+            "HeatRequirement" : 999.34361384,
             "FlwrHeatRequirement" : 900,
             "InterpolationMethod": 'linear',
             "HeatAccFunc": 'WangEngel'
