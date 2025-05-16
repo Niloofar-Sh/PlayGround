@@ -1,0 +1,42 @@
+Model:,MEMIE ES ANNA-LYZER
+Serial No:,20250402
+Calibrated:,20250402
+Owner:,AV MEDICAL 1
+
+Test,Date,Time,Tester,Location,D.U.T.,Ground,Ins Res,A-to-E,Earth Leak,Earth Leak,App Cct I,App Cct I,App Cct I,MCI,Load,Load,Ins Resist,Ins Resist,Touch Earth,Touch Iso,Touch Earth,Touch Iso,Check,Test,User,User
+No,,, Name,,ID,Resist,A+N to E,Voltage,N Open,Normal,Normal,N Open,E Open,BF (mA),Steady,Peak,A+N to Skt,A+N to AP,N Open,N Open,Normal,Normal,Pass/,Pass/,Comment,Comment
+,,,,,,(ohm),(Mohm),(V),(mA),(mA),(uA),(uA),(uA),CF (uA),(A),(A),(Mohm),(Mohm),(uA),(uA),(uA),(uA),Fail,Fail,One,Two
+001,08-04-2025,03:09,No Tester    ,No Location  ,No DUT ID    ,0.075,199.9,0243 ,0.007,0.005,0000 ,0000 ,0000 ,00.00,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,             ,             ,
+002,11-04-2025,10:49,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0236 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0001 ,     ,0000 ,    ,Pass,             ,             ,
+003,11-04-2025,09:53,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0283 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0001 ,     ,0000 ,Pass,Pass,DP30 dispense,3214U1804R   ,
+004,11-04-2025,10:04,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0237 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0000 ,     ,0000 ,Pass,Pass,PCB04        ,503ES4799936 ,
+005,11-04-2025,10:25,Farhang      ,Palm Clinic  ,No DUT ID    ,0.131,199.9,0237 ,0.003,0.002,0000 ,0000 ,0000 ,00.07,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,GE Ultrasound,LP9440234    ,
+006,11-04-2025,10:34,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0239 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0003 ,     ,0000 ,    ,Pass,Gel warmer   ,N/A          ,
+007,11-04-2025,10:57,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0242 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0002 ,     ,0000 ,    ,Pass,Centrifuge   ,02665        ,
+008,11-04-2025,11:12,Farhang      ,Palm Clinic  ,No DUT ID    ,0.299,005.9,0238 ,00.00,00.00,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,Sealer       ,403066/1004  ,
+009,11-04-2025,11:21,Farhang      ,Palm Clinic  ,No DUT ID    ,0.201,199.9,0240 ,00.30,00.21,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,Ult bath     ,305000/33596/,
+010,11-04-2025,12:50,Farhang      ,Palm Clinic  ,No DUT ID    ,0.158,199.9,0236 ,0.310,0.175,0000 ,0000 ,0003 ,0015 ,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,COLIN ECG    ,731261       ,
+011,11-04-2025,13:05,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0234 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0002 ,     ,0000 ,    ,Pass,DP30 Dispense,3209U1804R   ,
+012,11-04-2025,13:22,Farhang      ,Palm Clinic  ,No DUT ID    ,0.187,199.9,0231 ,0.004,0.005,0000 ,0000 ,0000 ,00.00,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,GE Ultrasound,LP9003243    ,
+013,11-04-2025,13:39,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0231 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0003 ,     ,0002 ,    ,Pass,Metron bed   ,706833002    ,
+014,11-04-2025,13:52,Farhang      ,Palm Clinic  ,No DUT ID    ,0.195,199.9,0231 ,0.085,0.023,0000 ,0000 ,0000 ,00.00,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,NORM O TEMP  ,072/N6234    ,
+015,11-04-2025,14:26,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0238 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0001 ,     ,0000 ,    ,Pass,BED PCB06    ,503ER3698102 ,
+016,11-04-2025,14:45,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0240 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0005 ,     ,0002 ,    ,Pass,PCB01        ,             ,
+017,11-04-2025,15:19,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0242 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0007 ,     ,0003 ,    ,Pass,PCB02        ,             ,
+018,11-04-2025,15:40,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0241 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0006 ,     ,0002 ,    ,Pass,PCB03        ,             ,
+019,11-04-2025,15:45,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0242 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0002 ,     ,0000 ,    ,Pass,Smoke evacuat,220146       ,
+020,11-04-2025,16:00,Farhang      ,Palm Clinic  ,No DUT ID    ,0.113,199.9,0242 ,0.034,0.019,0000 ,0000 ,0000 ,0008 ,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,Alsa diatherm,786/11/09    ,
+021,11-04-2025,16:30,Farhang      ,Palm Clinic  ,No DUT ID    ,0.160,199.9,0242 ,0.220,0.023,0000 ,0000 ,0000 ,00.10,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,ZIMMER       ,730495       ,
+022,11-04-2025,16:51,Farhang      ,Palm Clinic  ,No DUT ID    ,0.158,199.9,0244 ,0.224,0.110,0000 ,0000 ,0000 ,00.00,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,Lumenis      ,14326        ,
+023,11-04-2025,17:07,Farhang      ,Palm Clinic  ,No DUT ID    ,0.128,199.9,0243 ,0.190,0.099,0000 ,0000 ,0000 ,00.00,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,             ,             ,
+024,29-04-2025,16:24,Farhang      ,Palm Clinic  ,No DUT ID    ,0.151,003.4,0237 ,0.242,0.141,0000 ,0000 ,0039 ,00.10,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,1192         ,Syneron laser,
+025,29-04-2025,16:51,Farhang      ,Palm Clinic  ,No DUT ID    ,0.190,199.9,0236 ,0.052,0.121,0000 ,0000 ,0008 ,00.00,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,Cool glide ls,E11432       ,
+026,29-04-2025,17:08,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0242 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0000 ,     ,0084 ,    ,Pass,Cool relax cr,CR2/230931   ,
+027,29-04-2025,17:20,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0238 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0000 ,     ,0000 ,    ,Pass,Wax warmer   ,11248        ,
+028,29-04-2025,17:34,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0240 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0009 ,     ,0001 ,    ,Pass,Bed          ,7672         ,
+029,29-04-2025,17:45,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0243 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0001 ,     ,0000 ,    ,Pass,Towel warmer ,RTD16A9C01   ,
+030,29-04-2025,17:48,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0242 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0000 ,     ,0000 ,    ,Pass,Towel warmer2,RTD16A9C01   ,
+031,29-04-2025,17:59,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0241 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0012 ,     ,0025 ,    ,Pass,Skin viewer  ,7615         ,
+032,29-04-2025,18:03,Farhang      ,Palm Clinic  ,No DUT ID    ,     ,     ,0240 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0000 ,     ,0000 ,    ,Pass,Dermapen     ,3MD1901918CE ,
+033,29-04-2025,18:14,Farhang      ,Palm Clinic  ,No DUT ID    ,0.132,199.9,0242 ,0.085,0.052,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,Skin viewer  ,7616         ,
+

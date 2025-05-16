@@ -1,0 +1,36 @@
+Model:,MEMIE ES ANNA-LYZER
+
+Serial No:,20250402     
+
+Calibrated:,20250402     
+
+Owner:,AV MEDICAL 1 
+
+
+
+Test,Date,Time,Tester,Location,D.U.T.,Ground,Ins Res,A-to-E,Earth Leak,Earth Leak,App Cct I,App Cct I,App Cct I,MCI,Load,Load,Ins Resist,Ins Resist,Touch Earth,Touch Iso,Touch Earth,Touch Iso,Check,Test,User,User
+
+No,,, Name,,ID,Resist,A+N to E,Voltage,N Open,Normal,Normal,N Open,E Open,BF (mA),Steady,Peak,A+N to Skt,A+N to AP,N Open,N Open,Normal,Normal,Pass/,Pass/,Comment,Comment
+
+,,,,,,(ohm),(Mohm),(V),(mA),(mA),(uA),(uA),(uA),CF (uA),(A),(A),(Mohm),(Mohm),(uA),(uA),(uA),(uA),Fail,Fail,One,Two
+
+001,01-04-2024,16:46,Farhang      ,Laboratory   ,AV MEDICAL   ,0.255,199.9,0238 ,0.158,0.077,0000 ,0000 ,0000 ,0015 ,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,             ,             ,
+
+002,05-04-2024,10:54,Farhang      ,Laboratory   ,No DUT ID    ,0.000,199.9,0442 ,00.17,00.00,0000 ,0000 ,0000 ,     ,     ,     ,199.9,199.9,0002 ,     ,     ,     ,    ,Pass,             ,             ,
+
+003,08-04-2025,00:19,Farhang      ,Laboratory   ,No DUT ID    ,0.260,199.9,0247 ,00.02,00.00,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,first comment,second commen,
+
+004,08-04-2025,00:21,Farhang      ,Laboratory   ,No DUT ID    ,     ,     ,0248 ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,     ,     ,0002 ,     ,0000 ,    ,Pass,class2       ,             ,
+
+005,08-04-2025,00:22,Farhang      ,Laboratory   ,No DUT ID    ,0.211,199.9,0248 ,0.002,0.000,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,ni app part  ,             ,
+
+006,08-04-2025,00:24,Farhang      ,Laboratory   ,No DUT ID    ,0.181,199.9,0248 ,0.002,0.000,0000 ,0000 ,0000 ,     ,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,             ,             ,
+
+007,08-04-2025,00:25,Farhang      ,Laboratory   ,No DUT ID    ,0.196,199.9,0247 ,0.003,0.000,0000 ,0000 ,0000 ,     ,     ,     ,     ,     ,     ,     ,     ,     ,Pass,Pass,type b       ,             ,
+
+008,08-04-2025,00:43,Farhang      ,Laboratory   ,No DUT ID    ,0.175,199.9,0248 ,0.003,0.000,0000 ,0000 ,0000 ,00.21,     ,     ,     ,     ,     ,     ,     ,     ,    ,Pass,bf           ,             ,
+
+009,08-04-2025,00:44,Farhang      ,Laboratory   ,No DUT ID    ,0.201,199.9,0249 ,0.002,0.000,0000 ,0000 ,0000 ,0022 ,     ,     ,     ,     ,     ,     ,     ,     ,Pass,Pass,cf           ,             ,
+
+010,08-04-2025,00:46,Farhang      ,Laboratory   ,No DUT ID    ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,     ,199.9,199.9,0006 ,0000 ,0000 ,0000 ,    ,Pass,extra tesst  ,             ,
+
