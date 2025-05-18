@@ -70,7 +70,7 @@ def logistic(x, L, k, x0):
 def logistic_fit(x,y):
     initial_guess = [8, 1, 4]
     # Fit the curve
-    popt, _ = curve_fit(logistic, x, y, p0=initial_guess, bounds=(0, np.inf))
+    popt, _ = curve_fit(logistic, x, y, p0=initial_guess, bounds=(0, np.inf), method='trf', max_nfev=10000 )
     # Use the fitted parameters to compute the model predictions
     y_fit = logistic(x, *popt)  
     return y_fit, popt
@@ -138,9 +138,6 @@ def BB_specifications(location,df_doy_cols,BB_percent=False):
         assumed_bb_percent = .5
     max_observed_buds = df_doy_cols.iloc[:,-1].median() / assumed_bb_percent
 
-
-
-
     # fit a sigmoid to budbreak observations
     first_doy = [col for col in df_doy_cols.columns if df_doy_cols[col].mean()>0][0]
     start_idx = df_doy_cols.columns.get_loc(first_doy)
@@ -150,11 +147,11 @@ def BB_specifications(location,df_doy_cols,BB_percent=False):
     x_vals = range(len(y_vals))
 
     _, logistic_params = logistic_fit(x_vals, y_vals)
-    bb_start_val = round(.05 * df_doy_cols.iloc[:,-1].median(),1)
+    bb_start_val = round(.05 * df_doy_cols.iloc[:,-1].median(),2)
     
     full_range_doy = np.arange(first_doy, df_doy_cols.columns[-1]+1,1)
     y_fit = logistic(range(0,len(full_range_doy)), *logistic_params) 
-    BudBurstDOY = full_range_doy[y_fit > bb_start_val][0]
+    BudBurstDOY = full_range_doy[y_fit >= bb_start_val][0]
 
     PBB = [round(bud/df_doy_cols.iloc[:,-1].median(),2) for bud in df_doy_cols.median().values] 
     BB = [bud for bud in df_doy_cols.median().values]
@@ -172,9 +169,32 @@ def BB_specifications(location,df_doy_cols,BB_percent=False):
     return PBB, BB, BudBurstDOY, max_observed_buds
 
 def Flwr_specifications(MaxBB, df_doy_cols):
-    valid_cols = [col for col in df_doy_cols.columns if df_doy_cols[col].median() > round(0.05 * MaxBB)]
-    FlwrDOY = valid_cols[0] if valid_cols else [col for col in df_doy_cols.columns if df_doy_cols[col].mean() > round(0.05 * MaxBB)][0]
-    return FlwrDOY
+
+    Flowers = [flwr for flwr in df_doy_cols.mean().values]
+
+    # valid_cols = [col for col in df_doy_cols.columns if df_doy_cols[col].median() > round(.05 * df_doy_cols.iloc[:,-1].median(),1)]
+    # FlwrDOY =  valid_cols[0] if valid_cols else [col for col in df_doy_cols.columns if df_doy_cols[col].mean() > round(.05 * df_doy_cols.iloc[:,-1].median(),1)][0]
+    # Flowers = [flwr for flwr in df_doy_cols.median().values]
+
+    # fit a sigmoid to budbreak observations
+    first_doy = [col for col in df_doy_cols.columns if df_doy_cols[col].mean()>0][0]
+    start_idx = df_doy_cols.columns.get_loc(first_doy)
+    
+
+    y_vals = df_doy_cols.iloc[:, start_idx:].mean().values
+    x_vals = range(len(y_vals))
+
+    _, logistic_params = logistic_fit(x_vals, y_vals)
+    flwr_start_val = .05 * MaxBB # round(.05 * df_doy_cols.iloc[:,-1].median(),1)
+    
+    full_range_doy = np.arange(first_doy, df_doy_cols.columns[-1]+1,1)
+    y_fit = logistic(range(0,len(full_range_doy)), *logistic_params) 
+
+    FlwrDOY = full_range_doy[y_fit >= flwr_start_val][0]
+
+    
+
+    return FlwrDOY, Flowers
 
 
 def split_phrase(phrase):
@@ -247,17 +267,18 @@ def W(S,k):
 #---------------------------------------------------------------------
 def base_model_config():
     model_config = {
-            "StartDay" : '2000-03-21', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
+            "StartDay" : '2000-05-1', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
             "Tc_chill": 15.9, # chill model
-            "MinTemp": 8.09709852, # WangEngel model
-            "OptTemp": 15.9473022, # WangEngel model
-            "MaxTemp": 33.09247264, # WangEngel model
+            "MinTemp": 10.2, # WangEngel model
+            "OptTemp": 25, # WangEngel model
+            "MaxTemp": 28.9, # WangEngel model
+            "RefTemp": 17.1, # WangEngel model
             "Tb_GDH": 8, # GDH model
             "Tu_GDH": 21, # GDH model
             "Tc_GDH": 25, # GDH model
-            "ChillRequirement" : 1059.0032,
-            "HeatRequirement" : 897.01276331,
-            "FlwrHeatRequirement" : 900,
+            "ChillRequirement" : 1490.43077905,
+            "HeatRequirement" : 167.47525181,
+            "FlwrHeatRequirement" : 1061.20962136,
             "InterpolationMethod": 'linear',
             "HeatAccFunc": 'WangEngel',
             "T1": 2.45,
