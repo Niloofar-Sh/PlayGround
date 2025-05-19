@@ -139,17 +139,14 @@ def BB_specifications(location,df_doy_cols,BB_percent=False):
     max_observed_buds = df_doy_cols.iloc[:,-1].median() / assumed_bb_percent
 
     # fit a sigmoid to budbreak observations
-    first_doy = [col for col in df_doy_cols.columns if df_doy_cols[col].mean()>0][0]
-    start_idx = df_doy_cols.columns.get_loc(first_doy)
     
-
-    y_vals = df_doy_cols.iloc[:, start_idx:].median().values
+    y_vals = df_doy_cols.median().values
     x_vals = range(len(y_vals))
 
     _, logistic_params = logistic_fit(x_vals, y_vals)
-    bb_start_val = round(.05 * df_doy_cols.iloc[:,-1].median(),2)
+    bb_start_val = .05 * df_doy_cols.iloc[:,-1].median()
     
-    full_range_doy = np.arange(first_doy, df_doy_cols.columns[-1]+1,1)
+    full_range_doy = np.arange(df_doy_cols.columns[0], df_doy_cols.columns[-1],1)
     y_fit = logistic(range(0,len(full_range_doy)), *logistic_params) 
     BudBurstDOY = full_range_doy[y_fit >= bb_start_val][0]
 
@@ -177,17 +174,14 @@ def Flwr_specifications(MaxBB, df_doy_cols):
     # Flowers = [flwr for flwr in df_doy_cols.median().values]
 
     # fit a sigmoid to budbreak observations
-    first_doy = [col for col in df_doy_cols.columns if df_doy_cols[col].mean()>0][0]
-    start_idx = df_doy_cols.columns.get_loc(first_doy)
-    
 
-    y_vals = df_doy_cols.iloc[:, start_idx:].mean().values
+    y_vals = df_doy_cols.mean().values
     x_vals = range(len(y_vals))
 
     _, logistic_params = logistic_fit(x_vals, y_vals)
     flwr_start_val = .05 * MaxBB # round(.05 * df_doy_cols.iloc[:,-1].median(),1)
     
-    full_range_doy = np.arange(first_doy, df_doy_cols.columns[-1]+1,1)
+    full_range_doy = np.arange(df_doy_cols.columns[0], df_doy_cols.columns[-1]+1,1)
     y_fit = logistic(range(0,len(full_range_doy)), *logistic_params) 
 
     FlwrDOY = full_range_doy[y_fit >= flwr_start_val][0]
@@ -268,17 +262,17 @@ def W(S,k):
 def base_model_config():
     model_config = {
             "StartDay" : '2000-05-1', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
-            "Tc_chill": 15.9, # chill model
-            "MinTemp": 10.2, # WangEngel model
-            "OptTemp": 25, # WangEngel model
-            "MaxTemp": 28.9, # WangEngel model
-            "RefTemp": 17.1, # WangEngel model
+            "Tc_chill": 17.20296126, # chill model
+            "MinTemp": 8.6, # WangEngel model
+            "OptTemp": 20.65453828, # WangEngel model
+            "RefTemp": 20.65453828, # WangEngel model
+            "MaxTemp":  32.18127096, # WangEngel model
             "Tb_GDH": 8, # GDH model
             "Tu_GDH": 21, # GDH model
             "Tc_GDH": 25, # GDH model
-            "ChillRequirement" : 1490.43077905,
-            "HeatRequirement" : 167.47525181,
-            "FlwrHeatRequirement" : 1061.20962136,
+            "ChillRequirement" : 1855.30266484,
+            "HeatRequirement" : 269.51625828,
+            "FlwrHeatRequirement" : 931.47825013,
             "InterpolationMethod": 'linear',
             "HeatAccFunc": 'WangEngel',
             "T1": 2.45,

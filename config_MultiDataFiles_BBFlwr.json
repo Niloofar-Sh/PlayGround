@@ -6,17 +6,8 @@
                 "Flwr_sheet_name": "TPROB4Flowering2016",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"TrtCombination": "Control early"},
+                "treatments": {"Chemical": "control"},
                 "max_observed_buds": 13,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
-            },
-            {
-                "BB_sheet_name": "TPROB4BB2016",
-                "Flwr_sheet_name": "TPROB4Flowering2016",
-                "location": "Te Puke",
-                "cultivar": {"CV": "HW"},
-                "treatments": {"TrtCombination": "Control late"},
-                "max_observed_buds": 10,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
         ]
