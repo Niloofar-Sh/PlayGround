@@ -64,11 +64,15 @@ def find_daily_diff(df):
 
 # Define the logistic function
 def logistic(x, L, k, x0):
-    # Provide initial guesses for parameters L, k, x0
-    return L / (1 + np.exp(-k * (x - x0)))
+    # L: upper asymptote (final value)
+    # k: growth rate
+    # x0: midpoint (inflection day)
+    
+    return [L / (1 + np.exp(-k * (i - x0))) for i in x]
 
 def logistic_fit(x,y):
-    initial_guess = [8, 1, 4]
+    # Provide initial guesses for parameters L, k, x0
+    initial_guess = [np.max(y), 0.1, np.median(x)]
     # Fit the curve
     popt, _ = curve_fit(logistic, x, y, p0=initial_guess, bounds=(0, np.inf), method='trf', max_nfev=10000 )
     # Use the fitted parameters to compute the model predictions
@@ -141,13 +145,13 @@ def BB_specifications(location,df_doy_cols,BB_percent=False):
     # fit a sigmoid to budbreak observations
     
     y_vals = df_doy_cols.median().values
-    x_vals = range(len(y_vals))
+    x_vals = df_doy_cols.columns.to_numpy() 
 
     _, logistic_params = logistic_fit(x_vals, y_vals)
     bb_start_val = .05 * df_doy_cols.iloc[:,-1].median()
     
-    full_range_doy = np.arange(df_doy_cols.columns[0], df_doy_cols.columns[-1],1)
-    y_fit = logistic(range(0,len(full_range_doy)), *logistic_params) 
+    full_range_doy = np.arange(df_doy_cols.columns[0], df_doy_cols.columns[-1]+1,1)
+    y_fit = logistic(full_range_doy, *logistic_params) 
     BudBurstDOY = full_range_doy[y_fit >= bb_start_val][0]
 
     PBB = [round(bud/df_doy_cols.iloc[:,-1].median(),2) for bud in df_doy_cols.median().values] 
@@ -167,7 +171,7 @@ def BB_specifications(location,df_doy_cols,BB_percent=False):
 
 def Flwr_specifications(MaxBB, df_doy_cols):
 
-    Flowers = [flwr for flwr in df_doy_cols.mean().values]
+    Flowers = [flwr for flwr in df_doy_cols.median().values]
 
     # valid_cols = [col for col in df_doy_cols.columns if df_doy_cols[col].median() > round(.05 * df_doy_cols.iloc[:,-1].median(),1)]
     # FlwrDOY =  valid_cols[0] if valid_cols else [col for col in df_doy_cols.columns if df_doy_cols[col].mean() > round(.05 * df_doy_cols.iloc[:,-1].median(),1)][0]
@@ -176,14 +180,13 @@ def Flwr_specifications(MaxBB, df_doy_cols):
     # fit a sigmoid to budbreak observations
 
     y_vals = df_doy_cols.mean().values
-    x_vals = range(len(y_vals))
+    x_vals = df_doy_cols.columns.to_numpy()
 
     _, logistic_params = logistic_fit(x_vals, y_vals)
-    flwr_start_val = .05 * MaxBB # round(.05 * df_doy_cols.iloc[:,-1].median(),1)
+    flwr_start_val = .05 * df_doy_cols.iloc[:,-1].median() 
     
     full_range_doy = np.arange(df_doy_cols.columns[0], df_doy_cols.columns[-1]+1,1)
-    y_fit = logistic(range(0,len(full_range_doy)), *logistic_params) 
-
+    y_fit = logistic(full_range_doy, *logistic_params) 
     FlwrDOY = full_range_doy[y_fit >= flwr_start_val][0]
 
     
@@ -226,62 +229,38 @@ def seasonal_ave_fillna(df):
 
 
 
-
-
-def ChillModel(T, T1, T2, T_hi, T_lo, c1):
-    # T1 = 2.45
-    # T2 = 21
-    # T_hi = 16.45
-    # T_lo = -40.82
-    # c1 = 0.000411
-
-    if T < T1 : chill_unit = 0
-    if (T >= T1) and (T <= T2): chill_unit = c1 * (T_hi - T) * (T - T_lo)
-    if (T > T2): chill_unit =  c1 * (T_hi - T2) * (T2 - T_lo)
-
-    return chill_unit
-
-def HeatModel(T, T_base, r):
-    # T_base = 2
-    # r = 0.0002924
-    if T < T_base: heat_unit = 0
-    if T >= T_base: heat_unit = r * (T - T_base)
-    return heat_unit
-
-def W(S,k):
-    # k = 4
-    Weight = ((1+np.exp(-.5*k))/(1+np.exp(-k*(S-.5)))) * ((1-np.exp(-k*S))/(1-np.exp(-k)))
-    return Weight
-
-
-
 #---------------------------------------------------------------------
 #Function to create the default configuration for the model. This will be overridden as 
 #required during experimentation
 #---------------------------------------------------------------------
 def base_model_config():
     model_config = {
-            "StartDay" : '2000-05-1', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
-            "Tc_chill": 17.20296126, # chill model
-            "MinTemp": 8.6, # WangEngel model
-            "OptTemp": 20.65453828, # WangEngel model
-            "RefTemp": 20.65453828, # WangEngel model
-            "MaxTemp":  32.18127096, # WangEngel model
-            "Tb_GDH": 8, # GDH model
-            "Tu_GDH": 21, # GDH model
-            "Tc_GDH": 25, # GDH model
-            "ChillRequirement" : 1855.30266484,
-            "HeatRequirement" : 269.51625828,
-            "FlwrHeatRequirement" : 931.47825013,
+            "StartDay" : '2000-03-21', # start accumulation of chill units (year selection does not matter here, it'll be turned into day of year)
+
+            "Tc_chill": 14.29030057, # chill model
+            "MinTemp_BB": 3.79214885, # WangEngel BB
+            "OptTemp_BB": 21.80580273, # WangEngel BB
+            "RefTemp_BB": 21.80580273, # WangEngel BB
+            "MaxTemp_BB":  24.53329365, # WangEngel BB
+            "ChillRequirement" : 1689.30614499,
+            "HeatRequirement" : 101.29163679,
+
+            "MinTemp_flwr": 8.78222004, # WangEngel flwr
+            "OptTemp_flwr": 25.48475457, # WangEngel flwr
+            "RefTemp_flwr": 25.48475457, # WangEngel flwr
+            "MaxTemp_flwr":  31.65305655, # WangEngel flwr
+            "FlwrHeatRequirement" : 318.39239383,
+             
             "InterpolationMethod": 'linear',
             "HeatAccFunc": 'WangEngel',
+
             "T1": 2.45,
             "T2": 21,
             "T_hi": 16.45,
             "T_lo": -40.82,
-            "c1":  0.000411/81.903185,
+            "c1":  0.000411/80.903185,
             "T_base": 2,
-            "r": 0.0002924/75.95193273,
+            "r": 0.0002924/72.95193273,
             'k': 4
 
 

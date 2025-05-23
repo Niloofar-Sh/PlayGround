@@ -6,40 +6,10 @@
                 "Flwr_sheet_name": "TPROB4Flowering2016",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "control"},
+                "treatments": {"Chemical": "HiCane"},
+                "spray": "SprayDate",
                 "max_observed_buds": 13,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
-            }
-        ]
-    },
-    "Development of a tool to predict.xlsx": {
-        "sheets": [
-            {
-                "BB_sheet_name": "HaywardTPBB",
-                "Flwr_sheet_name": "HaywardTPFlowering",
-                "location": "Te Puke",
-                "cultivar": {"CV": "HW"},
-                "treatments": {"TrtCombination": "Con1"},
-                "max_observed_buds": 15,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
-            },
-            {
-                "BB_sheet_name": "HaywardTPBB",
-                "Flwr_sheet_name": "HaywardTPFlowering",
-                "location": "Te Puke",
-                "cultivar": {"CV": "HW"},
-                "treatments": {"TrtCombination": "Con2"},
-                "max_observed_buds": 13,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
-            },
-            {
-                "BB_sheet_name": "HaywardKKBB",
-                "Flwr_sheet_name": "HaywardKKFlowering",
-                "location": "Kerikeri",
-                "cultivar": {"CV": "HW"},
-                "treatments": {"TrtCombination": "Control"},
-                "max_observed_buds": 10,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
         ]
     },
@@ -50,7 +20,8 @@
                 "Flwr_sheet_name": "KatoaFlowering2008",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "control"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 11,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -59,7 +30,8 @@
                 "Flwr_sheet_name": "MeadFlowering2008",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "control"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 10,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
@@ -72,7 +44,8 @@
                 "Flwr_sheet_name": "KatoaFlowering2009",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "control"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 13,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -81,7 +54,8 @@
                 "Flwr_sheet_name": "MeadFlowering2009",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "control"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 10,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
@@ -94,7 +68,8 @@
                 "Flwr_sheet_name": "KatoaFlowering2010",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "control"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 10,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -103,7 +78,8 @@
                 "Flwr_sheet_name": "MeadFlowering2010",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "control"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -112,7 +88,8 @@
                 "Flwr_sheet_name": "NFlowering2010",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "control"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 12,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
@@ -125,7 +102,8 @@
                 "Flwr_sheet_name": "NFlowering2011",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "control"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
@@ -138,7 +116,8 @@
                 "Flwr_sheet_name": "TPHaywardFlowering2013",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "Co"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 12,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -147,7 +126,8 @@
                 "Flwr_sheet_name": "KKHaywardFlowering2013",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "Co"},
+                "treatments": {"Chemical": "HC"},
+                "spray": "SprayDate",
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
@@ -160,7 +140,8 @@
                 "Flwr_sheet_name": "TPHaywardFlowering2018",
                 "location": "Te Puke",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "Control"},
+                "treatments": {"Chemical": "6%HC+0.2%DS"},
+                "spray": "SprayDate",
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -169,7 +150,8 @@
                 "Flwr_sheet_name": "KKHaywardFlowering2018",
                 "location": "Kerikeri",
                 "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "Untreated Control"},
+                "treatments": {"Chemical": "HiCane 6% + 0.2% Driftstop"},
+                "spray": "SprayDate",
                 "max_observed_buds": 7,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
@@ -182,12 +164,13 @@
                     "Flwr_sheet_name": "HaywardFlowering2019",
                     "location": "Kerikeri",
                     "cultivar": {"CV": "HW"},
-                    "treatments": {"Chemical": "Untreated control"},
+                    "treatments": {"Chemical": "HC 6% + 0.2%DS"},
+                    "spray": "SprayDate",
                     "max_observed_buds": 12,
                     "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                 }
             ] 
-        },  
+    },  
 
         "KRC_Paint_G3HW__2020_SamplingData.xlsx": {
                 "sheets": [
@@ -196,7 +179,8 @@
                         "Flwr_sheet_name": "HWFlwrRaw",
                         "location": "Kerikeri",
                         "cultivar": {"CV": "HW"},
-                        "treatments": {"Chemical": "Control"},
+                        "treatments": {"Chemical": "HiCane+Driftstop"},
+                        "spray": "SprayDate",
                         "max_observed_buds": 7,
                         "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                     }
@@ -209,7 +193,8 @@
                         "Flwr_sheet_name": "HWFlwrRaw",
                         "location": "Kerikeri",
                         "cultivar": {"CV": "HW"},
-                        "treatments": {"Chemical": "Untreated control"},
+                        "treatments": {"Chemical": "HiCane+Driftstop"},
+                        "spray": "SprayDate",
                         "max_observed_buds": 8,
                         "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                     }
@@ -222,7 +207,8 @@
                     "Flwr_sheet_name": "HW-FloweringTP2020",
                     "location": "Te Puke",
                     "cultivar": {"CV": "HW"},
-                    "treatments": {"Chemical": "Control"},
+                    "treatments": {"Chemical": "HiCane"},
+                    "spray": "SprayDate",
                     "max_observed_buds": 8,
                     "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
                 }
@@ -235,7 +221,8 @@
                     "Flwr_sheet_name": "HWFlwrRawTP2021",
                     "location": "Te Puke",
                     "cultivar": {"CV": "HW"},
-                    "treatments": {"Chemical": "Control"},
+                    "treatments": {"Chemical": "HiCane"},
+                    "spray": "SprayDate",
                     "max_observed_buds": 8,
                     "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
                 }
@@ -249,12 +236,13 @@
                     "Flwr_sheet_name": "HW-Flowering-TP2020",
                     "location": "Te Puke",
                     "cultivar": {"CV": "HW"},
-                    "treatments": {"Chemical": "Control"},
+                    "treatments": {"Chemical": "HiCane"},
+                    "spray": "SprayDate",
                     "max_observed_buds": 8,
                     "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
         ] 
     }
-
 }
+
 
