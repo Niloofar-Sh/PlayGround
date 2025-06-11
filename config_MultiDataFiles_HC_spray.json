@@ -157,34 +157,6 @@
             }
         ] 
     },  
-    "Investigating Hi-Cane alternatives 2019-20.KK.xlsx": {
-            "sheets": [
-                {
-                    "BB_sheet_name": "HaywardBB2019",
-                    "Flwr_sheet_name": "HaywardFlowering2019",
-                    "location": "Kerikeri",
-                    "cultivar": {"CV": "HW"},
-                    "treatments": {"Chemical": "HC 6% + 0.2%DS"},
-                    "spray": "SprayDate",
-                    "max_observed_buds": 12,
-                    "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
-                }
-            ] 
-    },  
-    "KRC_Paint_G3HW__2020_SamplingData.xlsx": {
-            "sheets": [
-                {
-                    "BB_sheet_name": "HWBBRaw2020",
-                    "Flwr_sheet_name": "HWFlwrRaw",
-                    "location": "Kerikeri",
-                    "cultivar": {"CV": "HW"},
-                    "treatments": {"Chemical": "HiCane+Driftstop"},
-                    "spray": "SprayDate",
-                    "max_observed_buds": 7,
-                    "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
-                }
-            ] 
-    },
     "KRC_Spray_G3HW_2020_SamplingData.xlsx": {
         "sheets": [
                 {
@@ -198,34 +170,6 @@
                     "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                 }
             ] 
-    },
-    "TPRO_Paint_HW_2020_SamplingData.xlsx": {
-        "sheets": [
-            {
-                "BB_sheet_name": "HW-BudbreakTP2020",
-                "Flwr_sheet_name": "HW-FloweringTP2020",
-                "location": "Te Puke",
-                "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "HiCane"},
-                "spray": "SprayDate",
-                "max_observed_buds": 8,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
-            }
-        ]             
-    },
-    "TPRO_Paint_HW_2021_SamplingData.xlsx": {
-        "sheets": [
-            {
-                "BB_sheet_name": "HWBBRawTP2021",
-                "Flwr_sheet_name": "HWFlwrRawTP2021",
-                "location": "Te Puke",
-                "cultivar": {"CV": "HW"},
-                "treatments": {"Chemical": "HiCane"},
-                "spray": "SprayDate",
-                "max_observed_buds": 8,
-                "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
-            }
-        ]             
     },
     "TPRO_Spray_HW_2020_SamplingData.xlsx": {
             "sheets": [
