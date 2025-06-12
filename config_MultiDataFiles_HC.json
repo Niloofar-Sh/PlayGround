@@ -8,6 +8,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HiCane"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "control"},
                 "max_observed_buds": 13,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
@@ -22,6 +23,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "control"},
                 "max_observed_buds": 11,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -32,6 +34,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "control"},
                 "max_observed_buds": 10,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
@@ -46,6 +49,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "control"},
                 "max_observed_buds": 13,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -56,6 +60,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "control"},
                 "max_observed_buds": 10,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
@@ -70,6 +75,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "control"},
                 "max_observed_buds": 10,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -80,6 +86,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "control"},
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -90,6 +97,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "control"},
                 "max_observed_buds": 12,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
@@ -104,6 +112,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "control"},
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
@@ -118,6 +127,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "Co"},
                 "max_observed_buds": 12,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -128,6 +138,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HC"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "Co"},
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
@@ -142,6 +153,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "6%HC+0.2%DS"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "Control"},
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             },
@@ -152,6 +164,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HiCane 6% + 0.2% Driftstop"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "Untreated Control"},
                 "max_observed_buds": 7,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
             }
@@ -166,6 +179,7 @@
                     "cultivar": {"CV": "HW"},
                     "treatments": {"Chemical": "HC 6% + 0.2%DS"},
                     "spray": "SprayDate",
+                    "control": {"Chemical": "Untreated control"},
                     "max_observed_buds": 12,
                     "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                 }
@@ -180,6 +194,7 @@
                     "cultivar": {"CV": "HW"},
                     "treatments": {"Chemical": "HiCane+Driftstop"},
                     "spray": "SprayDate",
+                    "control": {"Chemical": "Control"},
                     "max_observed_buds": 7,
                     "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                 }
@@ -194,6 +209,7 @@
                     "cultivar": {"CV": "HW"},
                     "treatments": {"Chemical": "HiCane+Driftstop"},
                     "spray": "SprayDate",
+                    "control": {"Chemical": "Untreated control"},
                     "max_observed_buds": 8,
                     "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Kerikeri_interpolated_hourly_2007_2024.csv"
                 }
@@ -208,6 +224,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HiCane"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "Control"},
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
@@ -222,6 +239,7 @@
                 "cultivar": {"CV": "HW"},
                 "treatments": {"Chemical": "HiCane"},
                 "spray": "SprayDate",
+                "control": {"Chemical": "Control"},
                 "max_observed_buds": 8,
                 "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
@@ -236,6 +254,7 @@
                     "cultivar": {"CV": "HW"},
                     "treatments": {"Chemical": "HiCane"},
                     "spray": "SprayDate",
+                    "control": {"Chemical": "Control"},
                     "max_observed_buds": 8,
                     "weather_path": "C:/Users/hranfs/Documents/VS code/Weather/Weather_metwatch/Hourly/Te Puke_interpolated_hourly_2007_2024.csv"
             }
