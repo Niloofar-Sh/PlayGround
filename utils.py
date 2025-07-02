@@ -63,12 +63,12 @@ def find_daily_diff(df):
     return diff_daily
 
 # Define the logistic function
-def logistic(x, L, k, x0):
-    # L: upper asymptote (final value)
+def logistic(x, A, k, x0):
+    # A: upper asymptote (final value)
     # k: growth rate
     # x0: midpoint (inflection day)
     
-    return [L / (1 + np.exp(-k * (i - x0))) for i in x]
+    return [A / (1 + np.exp(-k * (i - x0))) for i in x]
 
 def logistic_fit(x,y):
     # Provide initial guesses for parameters L, k, x0
